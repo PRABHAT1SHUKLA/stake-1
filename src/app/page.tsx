@@ -7,7 +7,7 @@ import { ArrowRight, ChevronRight } from 'lucide-react'
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-zinc-900">
+    <div className="min-h-screen bg-blue-950">
       {/* Header */}
       <header className="fixed top-0 w-full border-b border-zinc-800 bg-zinc-900/50 backdrop-blur-xl">
         <div className="container flex h-16 items-center justify-between px-4">
@@ -24,11 +24,13 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-16">
-        <div className="container px-4 py-20 md:py-32">
+      <section className="relative pt-5">
+        <div className="container px-4 py-2 md:py-32">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+            
             <div className="flex flex-col justify-center space-y-4">
-              <div className="space-y-2">
+              <div className="space-y-8">
+              <h1 className="text-3xl font-bold tracking-tighter  sm:text-5xl xl:text-6xl/none bg-gradient-to-r text-transparent from-pink-500 via-orange-400  to-yellow-500 bg-clip-text"> The thrill is here</h1>
                 <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
                   Your Unrivalled Online Casino & Sportsbook
                 </h1>
@@ -55,7 +57,9 @@ export default function LandingPage() {
                 className="object-cover"
               />
             </div>
+
           </div>
+
         </div>
       </section>
 
@@ -92,17 +96,17 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                <Button variant="outline" className="border-zinc-800 text-white hover:bg-zinc-800">
+                <Button variant="outline" className="border-zinc-800 text-white hover:bg-zinc-800 bg-lime-600 hover:text-white">
                   Download for iOS
                 </Button>
-                <Button variant="outline" className="border-zinc-800 text-white hover:bg-zinc-800">
+                <Button variant="outline" className="border-zinc-800 text-white hover:bg-zinc-800 hover:text-white bg-blue-900">
                   Download for Android
                 </Button>
               </div>
             </div>
             <div className="relative aspect-video overflow-hidden rounded-xl lg:aspect-square">
               <Image
-                src="https://mediumrare.imgix.net/unauth-casino-hero-banner-en.png?w=382&h=400&fit=min&auto=format"
+                src="https://mediumrare.imgix.net/unauth-header-casino-en.png?w=333&h=500&fit=min&auto=format"
                 width={600}
                 height={600}
                 alt="Mobile app preview"
