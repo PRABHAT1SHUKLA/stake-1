@@ -39,43 +39,43 @@ export default function GamingPage() {
         <TabsList className="h-auto flex-wrap justify-start gap-2 bg-transparent p-0">
           <TabsTrigger
             value="lobby"
-            className="rounded-full bg-muted/50 data-[state=active]:bg-primary"
+            className="rounded-full bg-muted/50 text-white transition-colors data-[state=active]:bg-green-800 data-[state=active]:text-white"
           >
             Lobby
           </TabsTrigger>
           <TabsTrigger
             value="originals"
-            className="rounded-full bg-muted/50 data-[state=active]:bg-primary"
+            className="rounded-full bg-muted/50 text-white transition-colors data-[state=active]:bg-green-800 data-[state=active]:text-white"
           >
             Stake Originals
           </TabsTrigger>
           <TabsTrigger
             value="slots"
-            className="rounded-full bg-muted/50 data-[state=active]:bg-primary"
+         className="rounded-full bg-muted/50 text-white transition-colors data-[state=active]:bg-green-800 data-[state=active]:text-white"
           >
             Slots
           </TabsTrigger>
           <TabsTrigger
             value="live"
-            className="rounded-full bg-muted/50 data-[state=active]:bg-primary"
+          className="rounded-full bg-muted/50 text-white transition-colors data-[state=active]:bg-green-800 data-[state=active]:text-white"
           >
             Live Casino
           </TabsTrigger>
           <TabsTrigger
             value="shows"
-            className="rounded-full bg-muted/50 data-[state=active]:bg-primary"
+             className="rounded-full bg-muted/50 text-white transition-colors data-[state=active]:bg-green-800 data-[state=active]:text-white"
           >
             Game Shows
           </TabsTrigger>
           <TabsTrigger
             value="exclusives"
-            className="rounded-full bg-muted/50 data-[state=active]:bg-primary"
+    className="rounded-full bg-muted/50 text-white transition-colors data-[state=active]:bg-green-800 data-[state=active]:text-white"
           >
             Stake Exclusives
           </TabsTrigger>
           <TabsTrigger
             value="new"
-            className="rounded-full bg-muted/50 data-[state=active]:bg-primary"
+           className="rounded-full bg-muted/50 text-white transition-colors data-[state=active]:bg-green-800 data-[state=active]:text-white"
           >
             New Releases
           </TabsTrigger>
