@@ -27,10 +27,10 @@ export default function LandingPage() {
       <section className="relative pt-5">
         <div className="container px-4 py-2 md:py-32">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-            
+
             <div className="flex flex-col justify-center space-y-4">
               <div className="space-y-8">
-              <h1 className="text-3xl font-bold tracking-tighter  sm:text-5xl xl:text-6xl/none bg-gradient-to-r text-transparent from-pink-500 via-orange-400  to-yellow-500 bg-clip-text"> The thrill is here</h1>
+                <h1 className="text-3xl font-bold tracking-tighter  sm:text-5xl xl:text-6xl/none bg-gradient-to-r text-transparent from-pink-500 via-orange-400  to-yellow-500 bg-clip-text"> The thrill is here</h1>
                 <h1 className="text-3xl font-bold tracking-tighter text-white sm:text-5xl xl:text-6xl/none">
                   Your Unrivalled Online Casino & Sportsbook
                 </h1>
@@ -45,6 +45,20 @@ export default function LandingPage() {
                 </Button>
                 <Button size="lg" variant="outline" className="border-zinc-800 text-white hover:bg-zinc-800 bg-lime-600">
                   Learn More
+                </Button>
+              </div>
+              <div className=" relative py-10">
+                <Button
+                  size="lg"
+                  variant="default" // or any custom variant
+                  className="relative bg-cover bg-center text-white font-bold bg-gray-800 grayscale hover:filter-none transition-all duration-300"
+                  style={{
+                    backgroundImage: `url('https://mediumrare.imgix.net/casino-poker-cards-green-en.jpg?auto=format&w=78')`,
+
+                    
+                  }}
+                >
+                  CASINO
                 </Button>
               </div>
             </div>
