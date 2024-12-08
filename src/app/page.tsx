@@ -1,11 +1,22 @@
+"use client"
+
 import Image from "next/image";
 
 import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import { ArrowRight, ChevronRight } from 'lucide-react'
+import { useRouter } from "next/navigation";
+
 
 export default function LandingPage() {
+  
+  const router = useRouter(); // Use the `useRouter` hook from `next/navigation`
+
+  const handleClick = () => {
+    router.push("/casino"); // Navigate to the /casino page
+  };
+
   return (
     <div className="min-h-screen bg-blue-950">
       {/* Header */}
@@ -50,6 +61,7 @@ export default function LandingPage() {
               <div className=" relative py-10">
                 <Button
                   size="lg"
+                  onClick={handleClick}
                   variant="default" // or any custom variant
                   className="relative bg-cover bg-center text-white font-bold bg-gray-800 grayscale hover:filter-none transition-all duration-300"
                   style={{
