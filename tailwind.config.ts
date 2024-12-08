@@ -10,6 +10,10 @@ export default {
   theme: {
   	extend: {
   		colors: {
+				grey: {
+          600: 'var(--grey-600)',
+          200: 'var(--grey-200)',
+        },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -61,6 +65,9 @@ export default {
   				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
+			fontFamily: {
+        sans: ['proxima-nova', 'sans-serif'],
+      },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

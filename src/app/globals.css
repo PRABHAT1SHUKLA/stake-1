@@ -3,6 +3,8 @@
 @tailwind utilities;
 @layer base {
   :root {
+    --grey-600: #1a202c; /* Replace with your actual grey-600 color */
+  --grey-200: #edf2f7; 
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;
