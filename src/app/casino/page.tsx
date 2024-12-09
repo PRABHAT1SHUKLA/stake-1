@@ -17,11 +17,11 @@ const stakeOriginals = [
 ]
 
 const slots = [
-  { title: "Sweet Bonanza", image: "/games/sweet-bonanza.png" },
-  { title: "Gates of Olympus", image: "/games/gates-olympus.png" },
-  { title: "Sugar Rush", image: "/games/sugar-rush.png" },
-  { title: "Fruit Party", image: "/games/fruit-party.png" },
-  { title: "Big Bass Splash", image: "/games/big-bass.png" },
+  { title: "Sweet Bonanza", image: "/games/sweet-bonanza.png",link:"/games/mines" },
+  { title: "Gates of Olympus", image: "/games/gates-olympus.png" ,link:"/games/mines"},
+  { title: "Sugar Rush", image: "/games/sugar-rush.png",link:"/games/mines" },
+  { title: "Fruit Party", image: "/games/fruit-party.png",link:"/games/mines" },
+  { title: "Big Bass Splash", image: "/games/big-bass.png" ,link:"/games/mines"},
 ]
 
 export default function GamingPage() {

@@ -2,24 +2,33 @@
 
 import { cn } from "@/lib/utils"
 import { Card } from "@/components/ui/card"
+import { useRouter } from "next/navigation"
 
 interface GameCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   playersCount?: number
   image: string
-  link?:string
+  link:string
   variant?: "original" | "slot"
 }
 
 export function GameCard({ link ,title, playersCount, image, variant = "original", className, ...props }: GameCardProps) {
+
+ const router = useRouter()
+ 
+ function handleCLick(){
+   router.push(link)
+ }
+
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" className="block">
+    
     <Card
     className={cn(
       "group relative aspect-[4/5] overflow-hidden border-0 bg-gradient-to-br transition-all hover:scale-105",
       variant === "original" ? "from-primary/50 to-primary" : "from-muted/50 to-muted",
       className
     )}
+    onClick={handleCLick}
     style={{ backgroundImage: `url(${image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     {...props}
   >
@@ -33,7 +42,7 @@ export function GameCard({ link ,title, playersCount, image, variant = "original
       )}
     </div>
   </Card>
-  </a>
+  
   
   )
 }
