@@ -7,11 +7,13 @@ interface GameCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   playersCount?: number
   image: string
+  link?:string
   variant?: "original" | "slot"
 }
 
-export function GameCard({ title, playersCount, image, variant = "original", className, ...props }: GameCardProps) {
+export function GameCard({ link ,title, playersCount, image, variant = "original", className, ...props }: GameCardProps) {
   return (
+    <a href={link} target="_blank" rel="noopener noreferrer" className="block">
     <Card
     className={cn(
       "group relative aspect-[4/5] overflow-hidden border-0 bg-gradient-to-br transition-all hover:scale-105",
@@ -31,6 +33,7 @@ export function GameCard({ title, playersCount, image, variant = "original", cla
       )}
     </div>
   </Card>
+  </a>
   
   )
 }
