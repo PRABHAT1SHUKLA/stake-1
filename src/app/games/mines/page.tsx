@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { GameBoard } from "@/components/game-board"
-import { Sidebar } from "@/components/sidebar"
+import { Sidebar } from "@/components/mines-sidebar"
 import { VolatilitySwitch } from "@/components/volatility-switch"
 
 export default function MinesGame() {
