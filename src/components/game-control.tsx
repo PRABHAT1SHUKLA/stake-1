@@ -57,47 +57,47 @@ export default function GameControl() {
       {/* Footer */}
       <div className="flex flex-wrap justify-between gap-4 p-4 bg-zinc-900 rounded-lg">
         {/* Multiplier */}
-        <div className="flex items-center gap-2">
+        <div className="relative w-48 bg-zinc-800 border border-zinc-700 rounded-md flex items-center text-white">
+          {/* Input */}
           <Input
             type="number"
             value={multiplier.toFixed(2)}
-            onChange={(e) =>
-              handleMultiplierChange(parseFloat(e.target.value) || 0)
-            }
-            className="w-24 bg-zinc-800 border-zinc-700 text-white text-center"
+            onChange={(e) => handleMultiplierChange(parseFloat(e.target.value) || 0)}
+            className="w-full bg-transparent text-center border-none focus:ring-0 focus:outline-none"
           />
-          <span className="text-zinc-400">x</span>
-          <div className="flex flex-col">
-            <Button
-              variant="ghost"
-              size="sm"
-              className="px-2 py-0 text-zinc-400 hover:text-white"
+
+          {/* "x" Icon */}
+          <span className="absolute left-2 text-zinc-400">x</span>
+
+          {/* Arrow Buttons */}
+          {/* <div className="absolute right-2 flex flex-col gap-1">
+            <button
+              className="w-5 h-5 flex justify-center items-center bg-zinc-700 rounded-md hover:bg-zinc-600"
               onClick={() => handleMultiplierChange(multiplier + 0.01)}
             >
-              <ArrowUp size={10} />
-            </Button>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="px-2 py-0 text-zinc-400 hover:text-white"
+              <ArrowUp size={12} />
+            </button>
+            <button
+              className="w-5 h-5 flex justify-center items-center bg-zinc-700 rounded-md hover:bg-zinc-600"
               onClick={() => handleMultiplierChange(multiplier - 0.01)}
             >
-              <ArrowDown size={10} />
-            </Button>
-          </div>
+              <ArrowDown size={12} />
+            </button>
+          </div> */}
         </div>
 
+
         {/* Rollover */}
-        <div className="flex items-center gap-2">
+        <div className="relative w-48 bg-zinc-800 border border-zinc-700 rounded-md flex items-center text-white">
           <Input
             type="number"
             value={rollover.toFixed(2)}
             onChange={(e) =>
               setSliderValue([parseFloat(e.target.value) || 0])
             }
-            className="w-24 bg-zinc-800 border-zinc-700 text-white text-center"
+            className="w-full bg-transparent text-center border-none focus:ring-0 focus:outline-none"
           />
-          <span className="text-zinc-400">%</span>
+          <span className="absolute left-2 text-zinc-400">%</span>
         </div>
       </div>
     </div>
