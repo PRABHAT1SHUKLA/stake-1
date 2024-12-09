@@ -1,54 +1,54 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import * as React from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 
 interface ScrollContainerProps {
-  children: React.ReactNode
-  className?: string
+  children: React.ReactNode;
+  className?: string;
 }
 
 export function ScrollContainer({ children, className }: ScrollContainerProps) {
-  const scrollRef = React.useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft] = React.useState(false)
-  const [canScrollRight, setCanScrollRight] = React.useState(false)
+  const scrollRef = React.useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = React.useState(false);
+  const [canScrollRight, setCanScrollRight] = React.useState(false);
 
   const checkScroll = React.useCallback(() => {
-    const el = scrollRef.current
+    const el = scrollRef.current;
     if (el) {
-      setCanScrollLeft(el.scrollLeft > 0)
-      setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth)
+      setCanScrollLeft(el.scrollLeft > 0);
+      setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth);
     }
-  }, [])
+  }, []);
 
   React.useEffect(() => {
-    const el = scrollRef.current
+    const el = scrollRef.current;
     if (el) {
-      el.addEventListener("scroll", checkScroll)
-      window.addEventListener("resize", checkScroll)
-      checkScroll()
+      el.addEventListener("scroll", checkScroll);
+      window.addEventListener("resize", checkScroll);
+      checkScroll();
       return () => {
-        el.removeEventListener("scroll", checkScroll)
-        window.removeEventListener("resize", checkScroll)
-      }
+        el.removeEventListener("scroll", checkScroll);
+        window.removeEventListener("resize", checkScroll);
+      };
     }
-  }, [checkScroll])
+  }, [checkScroll]);
 
   const scroll = (direction: "left" | "right") => {
-    const el = scrollRef.current
+    const el = scrollRef.current;
     if (el) {
-      const scrollAmount = el.clientWidth * 0.8
+      const scrollAmount = el.clientWidth * 0.8;
       el.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
-      })
+      });
     }
-  }
+  };
 
   return (
-    <div className="group relative">
+    <div className={`group relative ${className || ""}`}>
       {canScrollLeft && (
         <Button
           variant="ghost"
@@ -61,7 +61,7 @@ export function ScrollContainer({ children, className }: ScrollContainerProps) {
       )}
       <div
         ref={scrollRef}
-        className="flex gap-4 overflow-x-auto pb-4 scrollbar-none"
+        className="flex gap-4 overflow-x-auto pb-4 custom-scrollbar"
       >
         {children}
       </div>
@@ -76,6 +76,5 @@ export function ScrollContainer({ children, className }: ScrollContainerProps) {
         </Button>
       )}
     </div>
-  )
+  );
 }
-

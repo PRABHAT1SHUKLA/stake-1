@@ -18,9 +18,9 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-blue-950">
+    <div className="min-h-screen bg-blue-950 pt-20">
       {/* Header */}
-      <header className="fixed top-0 w-full border-b border-zinc-800 bg-zinc-900/50 backdrop-blur-xl">
+      {/* <header className="fixed top-0 w-full border-b border-zinc-800 bg-zinc-900/50 backdrop-blur-xl">
         <div className="container flex h-16 items-center justify-between px-4">
           <Link href="/" className="flex items-center space-x-2">
             <div className="text-xl font-bold text-white">Stake</div>
@@ -32,7 +32,7 @@ export default function LandingPage() {
             <Button>Join Now</Button>
           </div>
         </div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="relative pt-5">

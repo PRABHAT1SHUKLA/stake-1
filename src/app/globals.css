@@ -90,3 +90,46 @@ html {
 body {
   font-feature-settings: "rlig" 1, "calt" 1;
 }
+/* Custom Scrollbar Styling */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #013A63, #2196f3);
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #013A63, #42a5f5);
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #29B6F6;
+  border-radius: 8px;
+}
+
+.custom-scrollbar {
+  scrollbar-color: #013A63 #01579B; /* For Firefox */
+  scrollbar-width: thin; /* For Firefox */
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 16px; /* Adjust scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: #013A63; /* Light blue */
+  border-radius: 6px; /* Rounded edges for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0277BD; /* Dark blue slider */
+  border-radius: 6px; /* Rounded edges for the slider */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #01579B; /* Darker blue when hovering over the slider */
+}
+
