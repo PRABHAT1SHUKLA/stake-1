@@ -17,8 +17,8 @@ export function GameSidebar() {
   }
 
   return (
-    <div className="flex flex-col gap-4 p-4 bg-zinc-900 rounded-lg">
-      <div className="space-y-2">
+    <div className="flex flex-col gap-4 p-4 h-full bg-zinc-900 rounded-lg">
+      <div className="space-y-4">
         <label htmlFor="betAmount" className="text-sm font-medium text-zinc-400">Bet Amount</label>
         <div className="relative">
           <Input
@@ -79,7 +79,8 @@ export function GameSidebar() {
           <Bitcoin className="absolute left-2 top-1/2 transform -translate-y-1/2 text-zinc-400" size={16} />
         </div>
       </div>
-      <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded transition-all duration-200 ease-in-out transform hover:scale-105">
+      <Button className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded transition-all duration-200 ease-in-out transform hover:scale-105"
+      >
         Bet
       </Button>
     </div>
