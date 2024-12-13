@@ -13,7 +13,7 @@ export default function MinesGame() {
   const [revealedTiles, setRevealedTiles] = useState<boolean[][]>(Array(5).fill(Array(5).fill(false)))
   const [payoutMultiplier, setPayoutMultiplier] = useState(1)
   const [isGameOver, setIsGameOver] = useState(false)
-
+     
   const generateBoard = () => {
     const newBoard = Array(5).fill(null).map(() => Array(5).fill(false))
     let minesPlaced = 0
